@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transit Ease - Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Rubik", sans-serif;
+        background-image: url("road.png"); /* Adding the large background image */
+        background-size: cover; /* Make the image cover the whole background */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Ensure the background does not repeat */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .login-container {
+        background-color: rgba(255, 255, 255, 0.9); /* Adding transparency to the container */
+        border-radius: 20px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 90%;
+        max-width: 400px;
+        text-align: center;
+        position: relative;
+      }
+
+      .login-header img {
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      .login-header h1 {
+        font-family: "Rubik Gemstones", sans-serif;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .login-form input[type="email"],
+      .login-form input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        font-size: 16px;
+      }
+
+      .login-form button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .login-form a {
+        display: block;
+        margin: 10px 0;
+        font-size: 14px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .social-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .social-buttons a {
+        background-color: #ddd;
+        padding: 10px;
+        width: 48%;
+        border-radius: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .footer-links {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .footer-links a {
+        font-size: 12px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      /* Media queries for responsiveness */
+      @media (max-width: 768px) {
+        .login-container {
+          width: 80%;
+          padding: 20px;
+        }
+
+        .login-header img {
+          width: 80px;
+        }
+
+        .login-header h1 {
+          font-size: 24px;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"],
+        .login-form button {
+          font-size: 14px;
+          padding: 8px;
+        }
+
+        .social-buttons a {
+          padding: 8px;
+        }
+
+        .footer-links a {
+          font-size: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .login-container {
+          width: 95%;
+          padding: 15px;
+        }
+
+        .login-header img {
+          width: 60px;
+        }
+
+        .login-header h1 {
+          font-size: 20px;
+        }
+
+        .login-form input[type="email"],
+        .login-form input[type="password"],
+        .login-form button {
+          font-size: 12px;
+          padding: 6px;
+        }
+
+        .social-buttons a {
+          padding: 6px;
+        }
+
+        .footer-links a {
+          font-size: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <a href="index.html">
+          <img src="logo.png" alt="Transit Ease Logo" />
+        </a>
+        <h1>LOGIN</h1>
+      </div>
+      <form class="login-form" onsubmit="window.location.href='profile.html'; return false;">
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button type="submit">Enter</button>
+      </form>
+      <div class="social-buttons">
+        <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&emr=1&ltmpl=default&ltmplcache=2&osid=1&passive=true&rm=false&scc=1&service=mail&ss=1&ifkv=AcMMx-eAMm783eeVSnSUEYEsr4UwYWcGqhUBagQ-uMXaTJoEQw_h7dIE23s-ATNNctP1dQF5mtrv&ddm=0&flowName=GlifWebSignIn&flowEntry=ServiceLogin">Continue with Google</a>
+        <a href="https://www.facebook.com">Continue with Facebook</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.hcaptcha.com/privacy">Privacy Notices</a>
+        <a href="https://www.hcaptcha.com/terms">Terms of Service</a>
+      </div>
+    </div>
+  </body>
+</html>

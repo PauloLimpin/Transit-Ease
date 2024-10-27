@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transit Ease - Search</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Rubik", sans-serif;
+            background-color: #f1ebea;
+            background-image: url("road.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            width: 100%; /* Ensure header takes full width */
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            flex-grow: 1; /* Allow search bar to take remaining space */
+            justify-content: center; /* Center the search bar */
+        }
+
+        .search-bar input {
+            width: 80%; /* Adjust width to make it look better */
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .logout {
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-left: 20px; /* Add margin for spacing */
+        }
+
+        .route-box {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            width: 80%;
+            padding: 20px;
+        }
+
+        .route-box img {
+            width: 200px;
+            height: auto;
+            border-radius: 25px;
+            margin-right: 20px; /* Spacing between map and text */
+        }
+
+        .route-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .route-info h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .route-info p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .icons-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+            background-color: #e0e0e0;
+        }
+
+        .icons-bar img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 70%;
+            }
+
+            .route-box {
+                width: 90%;
+            }
+
+            .route-box img {
+                width: 150px;
+            }
+
+            .icons-bar img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-bar {
+                width: 80%;
+            }
+
+            .route-box {
+                width: 95%;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .route-box img {
+                margin-bottom: 10px;
+            }
+
+            .icons-bar img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Transit Ease Logo" class="logo" onclick="goToHome()" />
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Pulung Santol" />
+            <button onclick="searchLocation()"><img src="search.png" alt="Search" /></button>
+        </div>
+        <div class="logout" onclick="logout()">LOG OUT</div>
+    </header>
+
+    <div class="route-box">
+        <img src="map.png" alt="Map" />
+        <div class="route-info">
+            <h1>PORAC - ANGELES</h1>
+            <p>Distance: 23.9 KM</p>
+        </div>
+    </div>
+
+    <div class="icons-bar">
+        <a href="search.html"><img src="searchs.png" alt="Search" /></a>
+        <a href="profile.html"><img src="home.png" alt="Home" /></a>
+        <a href="navigator.html"><img src="navigator.png" alt="Navigator" /></a>
+        <a href="ticket.html"><img src="ticket.png" alt="Tickets" /></a>
+    </div>
+
+    <script>
+        // Redirect to index.html when logo is clicked
+        function goToHome() {
+            window.location.href = "index.html";
+        }
+
+        // Redirect to login.html when logout is clicked
+        function logout() {
+            window.location.href = "login.html";
+        }
+
+        // Search function to open Google Maps for the inputted location
+        function searchLocation() {
+            const location = document.getElementById('search-input').value;
+            if (location) {
+                const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`;
+                window.open(googleMapsUrl, '_blank');
+            }
+        }
+    </script>
+</body>
+</html>

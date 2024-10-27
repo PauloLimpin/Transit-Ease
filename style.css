@@ -1,0 +1,232 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d1b3a0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo-search {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.site-title {
+    font-family: 'Rubik Gemstones', sans-serif;
+    font-size: 1.8em;
+    color: white;
+    margin-left: 10px;
+}
+
+input[type="search"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    input[type="search"] {
+        width: 150px;
+    }
+    .hero h1 {
+        font-size: 2em;
+    }
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero-images {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-img {
+    width: 30%; /* Flexibility for zoom and responsiveness */
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: -50px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        margin-top: 0;
+    }
+}
+
+/* Benefits Section */
+.benefits {
+    background-color: #efded7;
+    padding: 50px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.benefits-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-align: left;
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .benefits-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    text-align: center;
+    flex: 1 1 300px; /* Ensure boxes wrap on smaller screens */
+    margin: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+.footer-title {
+    font-family: 'Rubik Gemstones', sans-serif;
+    font-size: 1.5em;
+    color: white;
+    margin: 0 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px; /* Added space between Facebook and Gmail */
+    margin-left: auto;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between Privacy Notice and Terms of Service */
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    margin-top: 20px;
+}
+
+/* Social Icon Adjustments */
+.social-icon {
+    width: 40px; /* Adjust the size of the icons */
+    height: auto;
+    transition: outline 0.3s;
+}
+
+.social-icon:hover {
+    outline: 2px solid black; /* Outline effect on hover */
+}
+
+/* General Button */
+button {
+    padding: 5px 10px;
+    background-color: #ff5e5e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

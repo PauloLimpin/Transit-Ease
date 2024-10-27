@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Gemstones&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Rubik", sans-serif;
+            background-color: #f5ecea;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+            position: relative;
+            width: 60%;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .logout {
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .route-box {
+            background-color: white;
+            border-radius: 25px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            height: auto; /* Set to auto to fit content */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .route-box img {
+            width: 30%; /* Adjusted size of the map for better fit */
+            border-radius: 10px;
+        }
+
+        .route-info {
+            width: 65%; /* Adjust width to fit the layout */
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .driver-info {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .status {
+            color: green; /* Line color */
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .icons-bar {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 10px;
+            background-color: #e0e0e0;
+        }
+
+        .icons-bar img {
+            width: 40px;
+            height: 40px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .search-bar {
+                width: 80%;
+            }
+
+            .route-box {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .route-info {
+                text-align: center;
+                width: 100%;
+            }
+
+            .route-box img {
+                width: 90%; /* Full width for smaller screens */
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .search-bar {
+                width: 90%;
+            }
+
+            .route-box {
+                height: auto;
+            }
+
+            .icons-bar img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo" onclick="goToHome()" />
+        <div class="search-bar">
+            <input type="text" placeholder="PULUNG SANTOL" />
+            <button><img src="search.png" alt="Search Icon" /></button>
+        </div>
+        <div class="logout" onclick="logout()">LOG OUT</div>
+    </header>
+
+    <div class="route-box">
+        <img src="map.png" alt="Route Map" />
+        <div class="route-info">
+            <div class="driver-info">YOUR DRIVER 1</div>
+            PORAC - ANGELES<br />
+            DISTANCE: 23.9 KM<br />
+            <div class="status">DRIVER 1: 5 KM AWAY</div>
+        </div>
+    </div>
+
+    <div class="icons-bar">
+        <a href="search.html"><img src="search.png" alt="Search" /></a>
+        <a href="profile.html"><img src="home.png" alt="Home" /></a>
+        <a href="navigator.html"><img src="navigator.png" alt="Navigator" /></a>
+        <a href="tickets.html"><img src="tickets.png" alt="Tickets" /></a>
+    </div>
+
+    <script>
+        // Redirect to index.html when logo is clicked
+        function goToHome() {
+            window.location.href = "index.html";
+        }
+
+        // Redirect to login.html when logout is clicked
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
